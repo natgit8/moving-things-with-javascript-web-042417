@@ -11,6 +11,26 @@
     </div>
     <script>
       // your code here
+      var dodger = document.getElementById('dodger')
+      dodger.style.backgroundColor = "#FF69B4"
+
+      document.addEventListener('keydown', function(e) {
+        if (e.which === 37) {
+          moveDodgerLeft();
+        } else if (e.which === 39) {
+          moveDodgerRight();
+        }
+      })
+
+      function moveDodgerLeft() {
+          dodger.style.left = parseInt(dodger.style.left) - 5 + 'px';
+          }
+
+      function moveDodgerRight() {
+        dodger.style.left = parseInt(dodger.style.left) + 5 + 'px';
+      }
+
+
     </script>
   </body>
 </html>
